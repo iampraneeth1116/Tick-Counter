@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <nav class="dropdown">
+      <button class="Settings" onclick="settings()"> &#9881; </button>
+      <div id="content">
+        <button onclick="changebackground()">🌄 Background</button>
+        <hr>
+        <button onclick="changeshape()">🔺 Shape</button>
+      </div>
+    </nav>
+    <div id="main_content">
+      <div id="watch_background">
+        <div class="presentime">
+          <h1>&#9202; Present Time</h1>
+          <h1 id="p_time_h1">00:00:00 </h1>
+        </div>
+        <br />
+        <div id="stopwatch">
+          <h1>&#9201; Stop watch</h1>
+
+          <h1 id="s_time_h1">00:00:00</h1>
+        </div>
+        <br />
+        <div class="buttons">
+          <button class="button1" onclick="startfunction()">&#9654;</button>
+          <button class="button2" onclick="stopfunction()">&#9209;</button>
+          <button class="button3" onclick="resetfunction()">&#8634;</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

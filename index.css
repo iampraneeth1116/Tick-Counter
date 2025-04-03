@@ -1,0 +1,140 @@
+body {
+  background-image: url("background_image1.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: centre;
+  display: flex;
+  align-items: center;
+  transition: transform 1s ease-in-out;
+}
+
+#main_content {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#watch_background {
+  padding: 8rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 1rem solid black;
+  outline: 1rem solid rgba(5, 1, 17, 0.279);
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 10px 20px 40px 10px;
+}
+
+.presentime {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.307);
+  border-radius: 5rem;
+  transition-duration: 1s;
+}
+.presentime h1:nth-child(2) {
+  font-family: "Quantico", serif;
+}
+.presentime:hover {
+  box-shadow: 0px 5px 20px 10px;
+}
+#stopwatch {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.307);
+  border-radius: 5rem;
+  transition-duration: 1s;
+}
+#stopwatch h1:nth-child(2) {
+  font-family: "Quantico", serif;
+}
+#stopwatch:hover {
+  box-shadow: 0px 5px 20px 10px;
+}
+
+.button1 {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button1:hover {
+  background: rgba(40, 36, 36, 0.1);
+}
+.button2 {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.button2:hover {
+  background: rgba(40, 36, 36, 0.1);
+}
+.button3 {
+  background: transparent;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 2.7rem;
+  color: darkred;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button3:hover {
+  background: rgba(40, 36, 36, 0.1);
+}
+
+.Settings {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: bold;
+  top: 3rem;
+  right: 4rem;
+  background-color: rgba(255, 255, 255, 0.499);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  transition-duration: 1s;
+}
+.Settings:hover {
+  box-shadow: 10px 5px 20px 0px;
+}
+
+.dropdown #content {
+  top: 9rem;
+  right: 1.5rem;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.499);
+  border-radius: 1rem;
+  display: none;
+  box-shadow: 10px 5px 20px 0px;
+}
+#content button:nth-child(2) {
+  padding-left: 2.3rem;
+}
+
+#content button {
+  font-style: normal;
+  display: block;
+  background: transparent;
+  border: none;
+  color: black;
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
