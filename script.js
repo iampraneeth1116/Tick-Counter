@@ -1,40 +1,35 @@
 // present time
-
 const present_time = document.getElementById("p_time_h1");
-let state_time = ""
+let state_time = "";
+
 function updated_time() {
-  let date = new Date();
-  let Hours = date.getHours().toString().padStart(2, "0");
-  let Min = date.getMinutes().toString().padStart(2, "0");
-  let sec = date.getSeconds().toString().padStart(2, "0");
-  if (Hours < 12){
-    state_time = "AM"
-  }
-  else{
-    state_time = "PM"
-  }
-  present_time.innerText = `${Hours}:${Min}:${sec} ${state_time}`;
+  const date = new Date();
+  // let Hours = date.getHours().toString().padStart(2, "0");
+  // let Min = date.getMinutes().toString().padStart(2, "0");
+  // let sec = date.getSeconds().toString().padStart(2, "0");
+  // state_time = date.getHours() < 12 ? "AM" : "PM";
+  const formatted = date.toString().slice(0, 24);
+  present_time.innerText = `${formatted}`;
 }
 setInterval(updated_time, 1000);
 
-
-//stop watch
-
+// stop watch
 const s_H = document.getElementById("s_time_h1");
 let testing_seconds = 0;
-let result;
+let result = null;
+
 function overall_setup() {
-  let Hours = Math.floor(testing_seconds / 3600)
-    .toString()
-    .padStart(2, "0");
-  let min = Math.floor((testing_seconds % 3600) / 60)
-    .toString()
-    .padStart(2, "0");
-  let sec = Math.floor(testing_seconds % 60)
-    .toString()
-    .padStart(2, "0");
-  s_H.innerHTML = `${Hours}:${min}:${sec}`;
+  let hours = Math.floor(testing_seconds / 3600);
+  let minutes = Math.floor((testing_seconds % 3600) / 60);
+  let seconds = testing_seconds % 60;
+
+  if (hours < 10) hours = "0" + hours;
+  if (minutes < 10) minutes = "0" + minutes;
+  if (seconds < 10) seconds = "0" + seconds;
+
+  s_H.innerHTML = hours + ":" + minutes + ":" + seconds;
 }
+
 function startfunction() {
   if (!result) {
     result = setInterval(() => {
@@ -43,36 +38,35 @@ function startfunction() {
     }, 950);
   }
 }
+
 function stopfunction() {
   clearInterval(result);
   result = null;
 }
+
 function resetfunction() {
   stopfunction();
   testing_seconds = 0;
   overall_setup();
 }
+
 overall_setup();
 
 // setting function
 let hover = document.getElementById("content");
 let click_setting = 0;
+
 function settings() {
   click_setting++;
-  if (click_setting % 2 == 0) {
-    hover.style.display = "none";
-
-
-  } else {
-    hover.style.display = "block";
-  }
+  hover.style.display = click_setting % 2 === 0 ? "none" : "block";
 }
 
-//change background function
+// change background function
 let countClick = 0;
+
 function changebackground() {
   countClick++;
-  if (countClick % 2 == 0) {
+  if (countClick % 2 === 0) {
     document.body.style.backgroundImage = 'url("background_image1.jpg")';
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "centre";
@@ -82,12 +76,13 @@ function changebackground() {
   }
 }
 
-//change shape function
+// change shape function
 const watch_back = document.getElementById("watch_background");
 let shape_count = 0;
+
 function changeshape() {
   shape_count++;
-  if (shape_count % 2 == 0) {
+  if (shape_count % 2 === 0) {
     watch_back.style.borderRadius = "50%";
     watch_back.style.padding = "8rem";
   } else {
@@ -95,8 +90,4 @@ function changeshape() {
     watch_back.style.padding = "6.5rem";
   }
 }
-
-// use this transition for shape option
-
-//slideIndex = (slideIndex + 1) % 2;
-// document.body.style.transform = `translateX(-${slideIndex * 400}px)`
+console.log(Date())

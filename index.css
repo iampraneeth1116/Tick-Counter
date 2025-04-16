@@ -16,7 +16,7 @@ body {
   align-items: center;
 }
 #watch_background {
-  padding: 8rem;
+  padding: 10rem;
   text-align: center;
   border-radius: 50%;
   border: 1rem solid black;
@@ -28,6 +28,7 @@ body {
 }
 
 .presentime {
+  margin-top: -5vh;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: rgba(255, 255, 255, 0.307);
