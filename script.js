@@ -67,7 +67,7 @@ let countClick = 0;
 function changebackground() {
   countClick++;
   if (countClick % 2 === 0) {
-    document.body.style.backgroundImage = 'url("background_image1.jpg")';
+    document.body.style.backgroundImage = 'url("bg-image.jpg")';
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "centre";
   } else {
